@@ -9,22 +9,19 @@
 */
 .front {	
 	position: absolute;
-	backface-visibility: hidden;
-	/*top: 0;
-	left: 0;*/
+	-webkit-backface-visibility: hidden;
 }
 .back {
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.portfolio-item {
+	-webkit-transform-style: preserve-3d;
 }
 .portfolio-item:hover .front {
-	-webkit-transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 2s;
 	-webkit-transform: perspective( 600px ) rotateY(180deg);
 }
 
 .portfolio-item:hover .back {
-	-webkit-transform-style: preserve-3d;
-	-webkit-transition: -webkit-transform 2s;
 	-webkit-transform: perspective( 600px ) rotateY(360deg);
 }
 
