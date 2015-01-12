@@ -7,7 +7,6 @@
 		-webkit-transform-style
 		-webkit-backface-visibility
 */
-/*this is scott smeester*/
 .front {	
 	position: absolute;
 	backface-visibility: hidden;
