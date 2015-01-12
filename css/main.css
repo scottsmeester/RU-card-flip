@@ -16,22 +16,24 @@
 .back {
 	backface-visibility: hidden;
 }
-.portfolio-item {
-	/*perspective: 1000;*/
+.portfolio-item:hover .front {
 	-webkit-transform-style: preserve-3d;
-	/*-webkit-transition: -webkit-transform 2s;*/
-	/*transition: transform 2s;*/
-}
-.portfolio-item:hover {
 	-webkit-transition: -webkit-transform 2s;
-	-webkit-transform: rotateY(180deg);
-	backface-visibility: hidden;
+	-webkit-transform: perspective( 600px ) rotateY(180deg);
+}
+
+.portfolio-item:hover .back {
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 2s;
+	-webkit-transform: perspective( 600px ) rotateY(360deg);
 }
 
 .portfolio-item .front {
-	-webkit-transform: rotateY(0deg);
+	-webkit-transition: -webkit-transform 2s;
+	-webkit-transform: perspective( 600px ) rotateY(0deg);
 }
 
 .portfolio-item .back {
-	-webkit-transform: rotateY(180deg);
+	-webkit-transition: -webkit-transform 2s;
+	-webkit-transform: perspective( 600px ) rotateY(180deg);
 }
